@@ -1,0 +1,20 @@
+keycode  34 = bracketleft bracketright udiaeresis Udiaeresis udiaeresis Udiaeresis dead_diaeresis dead_abovering udiaeresis Udiaeresis dead_diaeresis dead_abovering udiaeresis Udiaeresis dead_diaeresis dead_abovering
+keycode  47 = backslash odiaeresis odiaeresis Odiaeresis odiaeresis Odiaeresis dead_doubleacute dead_belowdot odiaeresis Odiaeresis dead_doubleacute dead_belowdot odiaeresis Odiaeresis dead_doubleacute dead_belowdot
+keycode  48 = braceleft braceright adiaeresis Adiaeresis adiaeresis Adiaeresis dead_circumflex dead_caron adiaeresis Adiaeresis dead_circumflex dead_caron adiaeresis Adiaeresis dead_circumflex dead_caron
+keycode 10 = exclam 1 1 exclam onesuperior exclamdown
+keycode 11 = quotedbl 2 2 at twosuperior oneeighth
+keycode 12 = section 3 3 numbersign threesuperior sterling
+keycode 13 = dollar 4 4 dollar onequarter currency
+keycode 14 = percent 5 5 percent onehalf threeeighths
+keycode 15 = ampersand 6 6 asciicircum notsign fiveeighths
+keycode 16 = slash 7 7 ampersand braceleft seveneighths
+keycode 17 = parenleft 8 8 asterisk bracketleft trademark
+keycode 18 = parenright 9 9 parenleft bracketright plusminus
+keycode 19 = equal 0 0 parenright braceright degree
+keycode 20 = question ssharp ssharp question backslash questiondown U1E9E backslash questiondown U1E9E
+keycode 49 = asciicircum degree dead_circumflex degree U2032 U2033 U2032 U2033 dead_circumflex degree U2032 U2033 dead_circumflex degree U2032 U2033
+keycode  91 = KP_Delete period KP_Delete KP_Separator KP_Delete KP_Separator KP_Delete KP_Separator
+keycode 107 = Delete Delete Delete Delete Delete Delete
+
+clear Lock
+keycode 66 = Super_L

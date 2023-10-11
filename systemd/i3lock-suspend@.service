@@ -1,0 +1,18 @@
+[Unit]
+Description=suspend hibernate actions
+Before=suspend-then-hibernate.target
+Before=hibernate.target
+Before=suspend.target
+
+[Service]
+User=%I
+Type=forking
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/chelz/.cache/Xauthority
+ExecStart=/usr/bin/slock
+ExecStartPost=/usr/bin/sleep 1
+
+[Install]
+WantedBy=suspend-then-hibernate.target
+WantedBy=hibernate.target
+WantedBy=suspend.target

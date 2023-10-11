@@ -1,0 +1,15 @@
+{
+  "ssh": {
+    "address": "10.11.99.1",
+    "timeout": 2,
+    "username": "root",
+    "auth_method": "key",
+    "key": "/home/chelz/.ssh/id_rsa"
+  },
+  "orientation": "auto",
+  "pen_size": 15,
+  "pen_color": "red",
+  "pen_trail": 200,
+  "background_color": "white",
+  "hide_pen_on_press": true
+}

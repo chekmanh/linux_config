@@ -1,0 +1,44 @@
+unmailboxes *
+
+set realname = "Name"
+set from = "email@gmail.com"
+set use_from = yes
+set envelope_from = yes
+
+set smtp_url = "smtps://email@gmail.com@smtp.gmail.com:465/"
+set smtp_pass = $my_pass_1
+set imap_user = "email@gmail.com"
+set imap_pass = $my_pass_1
+set folder = "imaps://$imap_user@imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes
+
+# G to get mail
+# bind index G imap-fetch-mail
+my_hdr Cc: "email@gmail.com"
+
+unset record
+set trash = "+[Gmail]/Trash"
+set postponed = "+[Gmail]/Drafts"
+
+named-mailboxes Inbox +INBOX Sent "+[Gmail]/Sent Mail" Trash "+[Gmail]/Trash" Drafts "+[Gmail]/Drafts" Starred "+[Gmail]/Starred" All "+[Gmail]/All Mail" Bin "+[Gmail]/Bin" Important "+[Gmail]/Important" Spam "+[Gmail]/Spam"
+
+# Store message headers locally to speed things up.
+# If hcache is a folder, Mutt will create sub cache folders for each account which may speeds things up even more.
+set header_cache = ~/.cache/mutt/email_cache
+
+# Store messages locally to speed things up, like searching message bodies.
+# Can be the same folder as header_cache.
+# This will cost important disk usage according to your e-mail amount.
+set message_cachedir = "~/.cache/mutt/email"
+
+# Allow Mutt to open a new IMAP connection automatically.
+unset imap_passive
+
+# Keep the IMAP connection alive by polling intermittently (time in seconds).
+set imap_keepalive = 300
+
+# How often to check for new mail (time in seconds).
+set mail_check = 120
+
+# vim:ft=muttrc

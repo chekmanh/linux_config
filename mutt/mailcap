@@ -1,0 +1,5 @@
+text/html;                      w3m %s; nametemplate=%s.html
+text/html;                      w3m %s; nametemplate=%s.html; copiousoutput
+text/*;                         xdg-open %s;
+application/*;                  xdg-open %s;
+image/*;                        xdg-open %s;

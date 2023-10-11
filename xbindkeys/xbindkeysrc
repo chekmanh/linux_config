@@ -1,0 +1,210 @@
+# Sun 29 Sep 2019 05:46:57 PM UTC
+
+"~/.local/bin/other/screenshot -sr"
+Control + Mod1 + s
+
+"~/.local/shortcuts/monitor_external"
+F8
+
+"~/.local/shortcuts/dmenu/dmenu_monitor_external"
+Mod4 + F8
+
+"xrandr --output eDP""$XRANDRHYPHEN""1 --auto --primary --brightness 1 --output DP""$XRANDRHYPHEN""1 --off --output HDMI""$XRANDRHYPHEN""2 --off; xrdb -merge $XDG_CONFIG_HOME/X11/Xresources; pactl set-card-profile 0 output:analog-stereo+input:analog-stereo"
+Mod4 + shift + F8
+
+"~/.local/shortcuts/dwm/toggle_application /usr/bin/nvim ~/.cache/vim/notes"
+Mod4 + v
+
+"~/.local/shortcuts/dmenu/dmenu_information"
+Mod4 + shift + i
+
+"~/.local/shortcuts/mount/dmenuMount.sh"
+Mod4 + plus
+
+"~/.local/shortcuts/mount/dmenuUmount.sh"
+Mod4 + minus
+
+"find ~/img/wallpaper -type f | shuf | sxiv -t -"
+Mod4 + F7
+
+"find ~/img/ -type f | shuf | sxiv -bfS 3 -"
+Mod4 + shift + L
+
+"feh -B"#000000" --bg-fill $(find ~/img/wallpaper -type f | shuf | head -n 1) && mv ~/.fehbg ~/.cache/fehbg"
+Mod4 + shift + F7
+
+"~/.local/shortcuts/dmenu/dmenuNordvpn.sh"
+Mod4 + F2
+
+"notify-send 'trying chelz' && /usr/bin/nmcli connection up 'chelz' && notify-send 'chelz up'"
+Mod4 + shift + F2
+
+"pidof signal-desktop || cd ~/dl && signal-desktop"
+Mod4 + shift + s
+
+"~/.local/shortcuts/dwm/toggle_application pulsemixer"
+Mod4 + s
+
+# "pidof thunderbird || thunderbird"
+# Mod4 + shift + Control + m
+
+"pidof neomutt || $TERMINAL -e neomutt"
+Mod4 + shift + m
+
+"pidof newsboat || $TERMINAL -e newsboat"
+Mod4 + shift + n
+
+"~/.local/shortcuts/dmenu/dmenu_emoji"
+Mod4 + e
+
+"$READER"
+Mod4 + z
+
+"$TERMINAL sdcv"
+Mod4 + shift + t
+
+"ytdlandview"
+Mod4 + y
+
+"$BROWSER"
+Mod4 + b
+
+"chromium"
+Mod4 + shift + b
+
+"$TERMINAL -e python3"
+Mod4 + p
+
+"$TERMINAL -e htop"
+Mod4 + shift + p
+
+"clipmenu"
+Mod4 + c
+
+"clipmenu_line"
+Mod4 + shift + c
+
+"pactl set-sink-volume @DEFAULT_SINK@ 100% ; pkill -SIGRTMIN+4 $STATUS_BAR"
+shift + XF86AudioRaiseVolume
+
+"pactl set-sink-volume @DEFAULT_SINK@ 40% ; pkill -SIGRTMIN+4 $STATUS_BAR"
+shift + XF86AudioLowerVolume
+
+"pactl set-sink-volume @DEFAULT_SINK@ +5% ; pkill -SIGRTMIN+4 $STATUS_BAR"
+XF86AudioRaiseVolume
+
+"pactl set-sink-volume @DEFAULT_SINK@ -5% ; pkill -SIGRTMIN+4 $STATUS_BAR"
+XF86AudioLowerVolume
+
+"pactl set-sink-mute @DEFAULT_SINK@ toggle ; notify-send $([[ $(pulsemixer --get-mute) == '0' ]] && echo unmute || echo mute )"
+XF86AudioMute
+
+"~/.local/shortcuts/dmenu/dmenu_sound_card_profile"
+Mod4 + F10
+
+"xbacklight -inc 3"
+XF86MonBrightnessUp
+
+"xbacklight -dec 3"
+XF86MonBrightnessDown
+
+"xset dpms force off"
+F7
+
+# "i3lock -ui ~/img/wallpaper/flag_Mikasa.png && xset dpms force off"
+# Mod4 + l
+
+"slock"
+XF86ScreenSaver
+
+"slock"
+XF86AudioPrev
+
+"$TERMINAL -e $FILEVIEWER"
+Mod4 + o
+
+# drucken
+"keyboard_external"
+c:107
+
+"~/.local/shortcuts/toggle_vim_mode"
+Mod4 + Mod5 + plus
+
+"pactl set-source-mute alsa_input.pci-0000_00_1f.3.analog-stereo toggle && ([[ $(pulsemixer --list-sources | grep 'source-[0-9]*, Name: Built-in Audio Analog Stereo, Mute: 0') ]] && notify-send 'unmute' || notify-send 'mute') ; pkill -f -SIGRTMIN+2 $STATUS_BAR"
+Mod4 + m
+
+# "! pidof mpd && mpd ; $TERMINAL $MUSIC"
+# Control + m
+
+"notify-send "$(date +'     %H:%M:%S ')""$(cat /sys/class/power_supply/BAT0/capacity)"% "$(cal --color=always -m | sed "s/..7m/<b><span color=\"red\">/;s/..27m/<\/span><\/b>/")"; pkill -SIGRTMIN+9 $STATUS_BAR"
+Mod4 + t
+# $(date +'%n%d %a %H:%M:%S%n%N %V')
+
+"dunstctl close"
+Mod4 + x
+
+
+"~/.local/shortcuts/dwm/quit_dwm"
+m:0x10 + c:124
+
+
+# shift plus numpad
+"$TERMINAL -e python3"
+XF86Calculator
+
+"$TERMINAL -e ~/.local/shortcuts/stretch"
+shift + c:79
+
+"$TERMINAL -e ~/.local/shortcuts/mpfm"
+shift + c:80
+
+"$TERMINAL -e mpf current"
+shift + c:81
+
+"cd ~ ; $TERMINAL"
+shift + c:83
+
+"dmenu_run"
+shift + c:84
+
+"$TERMINAL -e $FILEVIEWER"
+shift + c:87
+
+"dmenu_custom"
+shift + c:88
+
+"btl"
+shift + c:89
+
+"nightlight $(echo -e 'x\n90\n80\n70\n60\n50\n40' | dmenu -p 'nightlight')"
+shift + c:85
+
+#"notify-send test"
+#    Control + Alt + y
+#
+#touch ~/.xbindkeysrc && xbindkeys -mk && rm ~/.xbindkeysrc 
+# use "xbindkeys --key" to find key
+# use "xbindkeys --multikey" to find key
+# "xbindkeys --poll-rc" to reload
+
+#   Release, Control, shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+#  control+shift + q
+# control + f with my keyboard
+#  c:41 + m:0x4
+
+# specify a mouse button
+#  control + b:2
+
+# control+alt+mod2 + f with my keyboard
+#  alt + c:0x29 + m:4 + mod2
+
+#  release+control+shift + a
+
+## Control + mouse button 2 release event starts rxvt
+#  Control + b:2 + Release
+# vim:nospell

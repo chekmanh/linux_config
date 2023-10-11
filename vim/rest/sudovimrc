@@ -1,0 +1,70 @@
+"" Fri 04 Oct 2019 06:09:41 AM UTC
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+filetype off
+set runtimepath+=/home/chelz/.config/vim,/home/chelz/.config/vim/after
+
+call plug#begin('/home/chelz/.config/vim/plugged')
+Plug 'Valloric/YouCompleteMe',
+call plug#end()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype plugin indent on
+
+"" basic setup if editing text (resource to reset)
+set cursorline                  " highlight current line
+
+"" encoding formatting
+set mouse=a                     " use mouse in vim
+set nrformats="bin"             " for <C-a> <C-x>
+set encoding=utf-8              " text encoding
+
+"" anything
+set showcmd                     " show incomplete commands
+set scrolloff=3                 " keeps a line at the bottom
+set showmatch                   " Highlight matching bracket
+set matchtime=1                 " Show match time
+set gdefault                    " substitute whole line flag g
+set history=1000                 " command history
+set backspace=indent,eol,start  " not nessassary for me
+set linebreak                   " doesn't break words
+
+set laststatus=2        " always show
+"" name|type|readflag|modflag|seperator|column|%|line/total
+set statusline=%F\ %y%r%#Slred#%m%#Statusline#%=%c,%P\ %l/%L
+
+"" swap files
+set undofile
+set undodir=~/.vim/undo/         " undo set
+set viminfofile=~/.vim/viminfo  " jumplist change list command history
+set directory^=~/.vim/swap/     " recovery ^prepend
+set backup
+set backupdir=~/.vim/backup
+
+"" default file manager netrw
+let g:netrw_liststyle = 3       " tree style
+let g:netrw_banner = 0          " no banner
+
+"" colors and listchar
+syntax enable                   " syntax highlighting
+
+"" autocomplete commands
+set wildmenu                    " auto completion
+set wildmode=list:longest,full  " All Commands?
+
+"" Searching
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set ignorecase                  " case insensitive
+set smartcase                   " Unless Capital letter
+
+"" Set list!
+set listchars=tab:▸\ ,eol:¬,trail:%     " show special char
+
+"" numbers and Indentation
+set autoindent                  " not smart indentation
+set relativenumber              " number also possible
+
+set expandtab                   " use spaces, not tabs
+
+nnoremap <space>q :q<cr>
+nnoremap <space>w :w<cr>

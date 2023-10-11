@@ -1,0 +1,1 @@
+KERNEL=="card0", SUBSYSTEM=="drm", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/chelz/.cache/Xauthority", RUN+="/home/chelz/.local/shortcuts/udev_monitor"

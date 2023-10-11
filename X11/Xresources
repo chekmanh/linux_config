@@ -1,0 +1,5 @@
+Sxiv.background: #000000
+Sxiv.foreground: #00C0FF
+
+Xft.dpi: 96
+st*font: WenQuanYi Micro Hei Mono Light,文泉驛等寬微米黑,文泉驿等宽微米黑:style=Light:pixelsize=16:antialias=true:autohint=true

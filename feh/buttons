@@ -1,0 +1,14 @@
+# unbind
+prev_img
+next_img
+
+# 1 (left mouse button)
+# 2 (middle mouse button)
+# 3 (right mouse button)
+# 4 (mousewheel down)
+# 5 (mousewheel up)
+
+scroll_down 5
+scroll_up 4
+
+# vim:nospell

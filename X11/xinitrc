@@ -1,0 +1,44 @@
+# remap nums
+[[ -f ~/.config/xmodmap/xmodmap ]] && (sleep 1 ; xmodmap ~/.config/xmodmap/xmodmap ; pkill xcape ; xcape -e 'Super_L=Escape') &
+
+[[ $(xset q) =~ 'Caps Lock:   on' ]] && xdotool key Caps_Lock
+
+# start status bar
+pidof dwmblocks || (sleep 2 ; dwmblocks) &
+
+# transparency handler
+pidof picom || picom --config ~/.config/picom/picom.conf &
+
+# notification sender
+pidof dunst || dunst -conf ~/.config/dunst/dunstrc &
+
+# set Xresources for sxiv
+xrdb -load ~/.config/X11/Xresources
+
+# hide mouse
+pidof unclutter || unclutter &
+
+# clipboard manager
+pidof clipmenud || clipmenud &
+
+# recent wallpaper
+[[ -f ~/.cache/fehbg ]] && ~/.cache/fehbg &
+
+# default keyboard layout
+setxkbmap -layout de &
+
+# auto repeat keys
+xset r rate 200 35 &
+
+# stop screen blackening
+xset s 3600 &
+xset dpms 0 0 3600 &
+
+# numlocks
+numlockx &
+
+# shortcuts
+[[ -f ~/.config/xbindkeys/xbindkeysrc ]] && xbindkeys -f ~/.config/xbindkeys/xbindkeysrc &
+
+exec $CURRENT_WM >> ~/.cache/$CURRENT_WM.log
+# vim:set ft=sh:

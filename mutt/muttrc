@@ -1,0 +1,102 @@
+# save passwords in file with gpg encryption
+source "gpg -dq $HOME/.config/mutt/muttpwds.gpg |"
+
+set charset="UTF-8"
+set new_mail_command="notify-send 'New Email %n new messages, %u unread.'"
+set metoo=yes
+
+set header_cache = "~/.cache/mutt"
+set imap_check_subscribed
+set imap_keepalive = 300
+unset imap_passive
+set mail_check = 60
+set mbox_type= Maildir
+
+set date_format="%y/%m/%d %I:%M%p"
+# set index_format="%2C %Z %?X?A& ? %D %-15.15F %s (%-4.4c)"
+set sort = 'reverse-date'
+set mailcap_path = ~/.config/mutt/mailcap
+
+set include
+
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+
+bind index G imap-fetch-mail
+bind index,pager R group-reply
+
+bind index,pager i noop
+bind index,pager g noop
+bind index j next-entry
+bind index k previous-entry
+bind index l display-message
+bind attach <return> view-mailcap
+bind attach l view-mailcap
+bind editor <space> noop
+# bind index G last-entry
+bind index gg first-entry
+bind pager,attach h exit
+bind index N search-opposite
+bind pager j next-line
+bind pager k previous-line
+bind pager l view-attachments
+
+set sidebar_visible = yes
+set sidebar_width = 20
+# set sidebar_short_path = yes
+# set sidebar_next_new_wrap = yes
+set mail_check_stats
+# set sidebar_format = '%B%?F? [%F]?%* %?N?%N/? %?S?%S?'
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cj sidebar-next
+bind index,pager \Cl sidebar-open
+bind index,pager \Cp sidebar-prev-new
+bind index,pager \Cn sidebar-next-new
+bind index,pager B sidebar-toggle-visible
+
+# macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
+
+bind index <Esc><T noop
+bind index <Esc>C noop
+bind index <Esc>P noop
+bind index <Esc>V noop
+bind index <Esc>b noop
+bind index <Esc>c noop
+bind index <Esc>d noop
+bind index <Esc>e noop
+bind index <Esc>i noop
+bind index <Esc>k noop
+bind index <Esc>l noop
+bind index <Esc>n noop
+bind index <Esc>p noop
+bind index <Esc>r noop
+bind index <Esc>s noop
+bind index <Esc>t noop
+bind index <Esc>u noop
+bind index <Esc>v noop
+bind pager <Esc>/ noop
+bind pager <Esc>C noop
+bind pager <Esc>P noop
+bind pager <Esc>c noop
+bind pager <Esc>d noop
+bind pager <Esc>e noop
+bind pager <Esc>i noop
+bind pager <Esc>k noop
+bind pager <Esc>n noop
+bind pager <Esc>p noop
+bind pager <Esc>r noop
+bind pager <Esc>s noop
+bind pager <Esc>u noop'
+
+folder-hook '~/.cache/mutt/email' 'source ~/.config/mutt/email.muttrc'
+
+macro index,pager 2 '<sync-mailbox><enter-command>source ~/.config/mutt/email.muttrc<enter><change-folder>!<enter>'
+
+source ~/.config/mutt/mine.muttrc
+
+source ~/.config/mutt/email.muttrc
+
+# vim: filetype=neomuttrc

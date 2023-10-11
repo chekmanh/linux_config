@@ -1,0 +1,35 @@
+# unsetting the keys bound to next/previous image by stating it without assigning any keys:
+next_img
+prev_img
+zoom_in 
+zoom_out 
+zoom_fill
+zoom_fit
+scroll_right 
+scroll_left 
+scroll_up 
+scroll_down 
+orient_1
+orient_3
+reload_image
+render
+quit
+
+
+# custom key mapping:
+zoom_fit a
+zoom_fill w
+zoom_in plus
+zoom_out minus
+scroll_down Down j
+scroll_up Up k
+scroll_left Left h
+scroll_right Right l
+orient_1 r
+orient_3 R
+quit q
+# assigning new keys for showing next/previous image
+next_img n space L
+prev_img N BackSpace H
+
+# vim:nospell
